@@ -4,7 +4,7 @@
 ## AIM
 To develop a Django application to store and retrieve data from a Movies Database using Object Relational Mapping(ORM).
 ## ENTITY RELATIONSHIP DIAGRAM
-![image](https://github.com/user-attachments/assets/370e4a27-4634-417c-aa3e-28aeb27b7e6c)
+![alt text](image-1.png)
 
 ## DESIGN STEPS
 
@@ -21,31 +21,32 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-```
+```python
 admin.py
 
 from django.contrib import admin
-from .models import Employee, EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Movie, MovieAdmin
+admin.site.register(Movie,MovieAdmin)
 
 models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee(models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
-    name=models.CharField(max_length=10)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
+class Movie(models.Model):
+    Mid=models.CharField(max_length=20,help_text="Movie ID")
+    Name=models.CharField(max_length=10)
+    Genre=models.CharField(max_length=20)
+    Rating=models.IntegerField()
+    Collection=models.IntegerField()
+    Year=models.IntegerField()
     
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+class MovieAdmin(admin.ModelAdmin):
+    list_display=('Mid','Name','Genre','Rating','Collection','Year')
     
 ```
 
 ## OUTPUT
-![alt text](<Screenshot (147).png>)
+![alt text](image.png)
 
 ## RESULT
 Thus the program for creating Employee's Details database using ORM has been executed successfully
