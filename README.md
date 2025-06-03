@@ -18,7 +18,7 @@ Create a new app in Django project
 Enter the code for admin.py and models.py
 
 ### STEP 4:
-Execute Django admin and create details for 10 books
+Execute Django admin and create details for 10 Movies
 
 ## PROGRAM
 ```python
@@ -50,4 +50,4 @@ class MovieAdmin(admin.ModelAdmin):
 ![alt text](image.png)
 
 ## RESULT
-Thus the program for creating Employee's Details database using ORM has been executed successfully
+Thus the program for creating Movie Details database using ORM has been executed successfully
